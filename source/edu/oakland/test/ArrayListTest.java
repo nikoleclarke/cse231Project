@@ -7,7 +7,7 @@ public class ArrayListTest extends TestCase{
 
   }
 
-  public void testSort){
+  public void testSort()){
 
   }
 }
