@@ -7,5 +7,5 @@ Team 2 will then post the required data as discussed below.
 ## Team 2 Lead: Nikole Clarke
 
 Dillon and Corey will work on PART 1.
-Damian and Bryan will work on PART 2.
+Damien and Bryan will work on PART 2.
 Robin and Nikole will work on PART 3.
