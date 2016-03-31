@@ -22,17 +22,14 @@ public class ArrayListGen{
 	*The generateArrayList method creates the ArrayList
 	*and sets it equal to the provided int array
 	*@param array int array used in order to create the ArrayList
-	*@return the results of the ArrayList
 	*/
-	public ArrayList<Integer> generateArrayList(int[] array) {
+	public void generateArrayList(int[] array) {
 		
 		list = new ArrayList<Integer>();
 		
 		for (int i = 0; i < array.length; i++) {
 			list.add(i);
-		}	
-		
-		return list;
+		}
 		
 	}
 	
