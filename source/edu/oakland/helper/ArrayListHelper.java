@@ -9,7 +9,7 @@ public class ArrayListHelper{
     this.arrayList = arrayList;
   }
 
-  public int[] bubbleSort(){
+  public ArrayList<Integer> bubbleSort(){
 
       /*
       * i starts at the end of the array As it is decremented all
