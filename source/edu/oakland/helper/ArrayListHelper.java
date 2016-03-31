@@ -9,6 +9,41 @@ public class ArrayListHelper{
     this.arrayList = arrayList;
   }
 
+  public int[] bubbleSort(){
+
+      /*
+      * i starts at the end of the array As it is decremented all
+      * indexes greater then they are sorted
+      */
+
+      for(int i = arrayList.size() - 1; i > 1; 1--){
+
+        /*
+        *The inner loop starts at the beginning of the array and
+        *compares each value next to each other. If the value is greater
+        * then they are swapped
+        */
+
+        for(int j = 0; j < i; j++){
+
+          //To change sort to Decending change
+
+          if(arrayList.get(j) > arrayList.get(j +1)) {
+
+            swapValues(j, j+1);
+            }
+
+        }
+
+      }
+      return theArray;
+  }
+
+  public void swapValues(int indexOne, int indexTwo){
+    int temp = arrayList.get(indexOne);
+    arrayList.get(indexOne) = arrayList.get(indexTwo);
+    arrayList.get(indexTwo) = temp;
+  }
 
   public int find(int number){
     return find(number, 0, arrayList.size()-1);
