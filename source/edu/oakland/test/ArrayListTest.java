@@ -6,9 +6,11 @@ import edu.oakland.helper.*;
 public class ArrayListTest extends TestCase{
 	public void setUp(){
 		private int[] intArray;
-		private ArrayList<integer> arrayList;
+		private ArrayList<Integer> arrayList;
+		private ArrayList<Integer> sortedArrayList;
 		ArrayListGen aListGen = new ArrayListGen();
-			
+		ArrayListHelper aListHelper;
+		
 		intArray = new int[20];
 		
 		for (int i = 0; i < length; i++) {
@@ -17,6 +19,11 @@ public class ArrayListTest extends TestCase{
 		
 		aListGen.generateArrayList(intArray);
 		arrayList = aListGen.getArrayList();
+		
+		aListHelper = new ArrayListHelper(arrayList);
+		sortedArrayList = aListHelper.bubbleSort();
+		
+		
 			
 	}
 
