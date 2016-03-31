@@ -1,4 +1,4 @@
-CD C:\cse231
+CD ..
 
 ::root>javadoc [options] [packagenames] [Java sourcefilenames]
 
