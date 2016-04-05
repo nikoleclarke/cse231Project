@@ -8,7 +8,8 @@ package edu.oakland.helper;
 *@since "version 1.0"
 */
 
-import java.util.*
+import java.util.*;
+
 public class ArrayListGen{
 
 	private int[] array;

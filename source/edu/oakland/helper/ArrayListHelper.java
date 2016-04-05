@@ -16,7 +16,7 @@ public class ArrayListHelper{
       * indexes greater then they are sorted
       */
 
-      for(int i = arrayList.size() - 1; i > 1; 1--){
+      for(int i = arrayList.size() - 1; i > 1; i--){
 
         /*
         *The inner loop starts at the beginning of the array and
@@ -36,7 +36,7 @@ public class ArrayListHelper{
         }
 
       }
-      return theArray;
+      return arrayList;
   }
 
   public void swapValues(int indexOne, int indexTwo){
