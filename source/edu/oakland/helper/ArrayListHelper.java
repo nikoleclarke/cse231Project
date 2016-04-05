@@ -41,8 +41,8 @@ public class ArrayListHelper{
 
   public void swapValues(int indexOne, int indexTwo){
     int temp = arrayList.get(indexOne);
-    arrayList.get(indexOne) = arrayList.get(indexTwo);
-    arrayList.get(indexTwo) = temp;
+    arrayList.set(indexOne, arrayList.get(indexTwo));
+    arrayList.set(indexTwo, temp);
   }
 
   public int find(int number){
