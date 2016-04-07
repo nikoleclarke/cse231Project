@@ -12,12 +12,13 @@ public class ArrayListTest extends TestCase{
 	private ArrayListHelper aListHelper;
 	
 	public void setUp(){
-		ArrayListGen arrayList = new ArrayListGen(intArray);
-		aListHelper = new ArrayListHelper(arrayList);
-		
+		//Test array
 		intArray = {200, 150, 390, 20, 500, 1010, 971, 850, 90, 430};
 		finalArray = {971, -1};	
-			
+		
+		//Initialize files
+		ArrayListGen arrayList = new ArrayListGen(intArray);
+		aListHelper = new ArrayListHelper(arrayList);
 	}
 
 	public void testSort(){
