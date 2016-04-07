@@ -6,6 +6,7 @@ public class ArrayListHelper {
 	private long startTime;
 	private long endTime;
 	private long totalTime;
+	private long startSortTime, endSortTime, totalSortTime;
 
 	private ArrayList<Integer> arrayList;
 
@@ -19,6 +20,8 @@ public class ArrayListHelper {
 		* i starts at the end of the array As it is decremented all
 		* indexes greater then they are sorted
 		*/
+		
+		startSortTime = System.currentTimeMillis();
 
 		for (int i = arrayList.size() - 1; i > 1; i--) {
 
@@ -39,6 +42,12 @@ public class ArrayListHelper {
 			}
 
 		  }
+		  
+		  endSortTime = System.currentTimeMillis();
+		  totalSortTime = endSortTime - startSortTime();
+		  
+		  System.out.println("Time elapsed during bubble sort: " + (totalSortTime) + " milliseconds.");
+		  
 		  return arrayList;
 	  }
 
@@ -58,6 +67,10 @@ public int find(int number) {
 
 public long getTime() {
 	return totalTime;
+}
+
+public long getSortTime(){
+	return totalSortTime;
 }
 
 private int find(int number, int left, int right) {
