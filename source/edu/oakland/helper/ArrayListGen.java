@@ -10,37 +10,20 @@ package edu.oakland.helper;
 
 import java.util.*;
 
-public class ArrayListGen{
+public class ArrayListGen extends ArrayList<Integer>{
 
 	private int[] array;
-  
-	/**
-	*list is used to create the ArrayList
-	*/
-	private ArrayList<Integer> list;
-
+	
 	/**
 	*The generateArrayList method creates the ArrayList
 	*and sets it equal to the provided int array
 	*@param array int array used in order to create the ArrayList
 	*/
-	public void generateArrayList(int[] array) {
-		
-		list = new ArrayList<Integer>();
+	public ArrayListGen(int[] array){
 		
 		for (int i = 0; i < array.length; i++) {
-			list.add(i);
+			add(i);
 		}
-		
-	}
-	
-	
-	/**
-	*The getArrayList method returns the value of created from generateArrayList
-	*@return the results of the ArrayList
-	*/
-	public ArrayList<Integer> getArrayList(){
-		return list;	
 	}
   
 }
