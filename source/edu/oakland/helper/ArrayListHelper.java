@@ -9,6 +9,7 @@ public class ArrayListHelper {
 	private long startSortTime, endSortTime, totalSortTime;
 
 	private ArrayList<Integer> arrayList;
+	private int[] values;
 
 	public ArrayListHelper(ArrayList<Integer> arrayList){
 		this.arrayList = arrayList;
@@ -46,7 +47,7 @@ public class ArrayListHelper {
 		}
 		
 		endSortTime = System.currentTimeMillis();
-		totalSortTime = endSortTime - startSortTime();
+		totalSortTime = endSortTime - startSortTime;
 		
 		System.out.println("Time elapsed during bubble sort: " + (totalSortTime) + " milliseconds.");
 		
@@ -62,7 +63,7 @@ public class ArrayListHelper {
 		startTime = System.currentTimeMillis();
 		int result = find(number, 0, arrayList.size()-1);
 		endTime = System.currentTimeMillis();
-		totalTime = System.out.println("Finding the odd numbers took " + (endTime - startTime));
+		totalTime = (endTime - startTime);
 		return result;
 	}
 	
@@ -86,5 +87,9 @@ public class ArrayListHelper {
 		}
 	
 	return element;
+	}
+	
+	public int[] getValues(){
+		return values;	
 	}
 }
