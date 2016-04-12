@@ -16,10 +16,10 @@ public class ArrayListHelper {
 	*Time variables are used to find Big O' Notation
 	*
 	*/
-	private long startTime;
-	private long endTime;
-	private long totalTime;
+	private long startTime, endTime, totalTime;
+	private long timeMicro, timeMilli;
 	private long startSortTime, endSortTime, totalSortTime;
+	private long sortTimeMicro, sortTimeMilli;
 
 	private ArrayList<Integer> arrayList;
 	private int[] values;
@@ -37,7 +37,7 @@ public class ArrayListHelper {
 		*indexes greater then they are sorted
 		*/
 		
-		startSortTime = System.currentTimeMillis();
+		startSortTime = System.nanoTime();
 		
 		for (int i = arrayList.size() - 1; i > 1; i--) {
 		
@@ -59,10 +59,14 @@ public class ArrayListHelper {
 		
 		}
 		
-		endSortTime = System.currentTimeMillis();
+		endSortTime = System.nanoTime();
 		totalSortTime = endSortTime - startSortTime;
+		sortTimeMicro = (totalSortTime/1000);
+		sortTimeMilli = (sortTimeMicro/1000);
 		
-		System.out.println("Time elapsed during bubble sort: " + (totalSortTime) + " milliseconds.");
+		System.out.println("Time elapsed during bubble sort: " + (totalSortTime) + " nanoseconds.");
+		System.out.println((sortTimeMicro) + " microseconds.");
+		System.out.println((sortTimeMilli) + " milliseconds.");
 		
 	}
 
@@ -73,10 +77,18 @@ public class ArrayListHelper {
 	}
 
 	public int find(int number) {
-		startTime = System.currentTimeMillis();
+		startTime = System.nanoTime();
 		int result = find(number, 0, arrayList.size()-1);
-		endTime = System.currentTimeMillis();
+		endTime = System.nanoTime();
 		totalTime = (endTime - startTime);
+		
+		timeMicro = (totalTime/1000);
+		timeMilli = (timeMicro/1000);
+		
+		System.out.println("Time elapsed during array search: " + (totalTime) + " nanoseconds.");
+		System.out.println((timeMicro) + " microseconds.");
+		System.out.println((timeMilli) + " milliseconds.");
+		
 		return result;
 	}
 	
