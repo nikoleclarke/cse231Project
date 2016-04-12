@@ -78,10 +78,10 @@ public class ArrayListHelper {
 
 	public boolean find(int number) {
 		values = {-1,-1};
-		startTime = System.currentTimeMillis();
+		startTime = System.nanoTime();
 		boolean result = find(0, arrayList.size()-1);
 		boolean result = find();
-		endTime = System.currentTimeMillis();
+		endTime = System.nanoTime();
 		totalTime = (endTime - startTime);
 
 		timeMicro = (totalTime/1000);
