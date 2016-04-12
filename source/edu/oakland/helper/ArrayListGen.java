@@ -11,8 +11,6 @@ package edu.oakland.helper;
 import java.util.*;
 
 public class ArrayListGen extends ArrayList<Integer>{
-
-	private int[] array;
 	
 	/**
 	*The generateArrayList method creates the ArrayList
