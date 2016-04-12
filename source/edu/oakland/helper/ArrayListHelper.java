@@ -1,8 +1,21 @@
 package edu.oakland.helper;
 import java.util.*;
 
+/**
+*This class is responsible for sorting the ArrayList and finding
+*the first two odd integers between 400 and 4000 along with
+*the Big O' Notation for everything
+*@author Team 2
+*@version "version 2.0 033116" 
+*@since "version 1.0"
+*/
+
 public class ArrayListHelper {
 
+	/**
+	*Time variables are used to find Big O' Notation
+	*
+	*/
 	private long startTime;
 	private long endTime;
 	private long totalTime;
