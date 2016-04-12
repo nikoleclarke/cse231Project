@@ -11,11 +11,14 @@ package edu.oakland.helper;
 import java.util.*;
 
 public class ArrayListGen extends ArrayList<Integer>{
+<<<<<<< HEAD
 
 	/**
 	*array is used to create the ArrayList
 	*/
 	private int[] array;
+=======
+>>>>>>> 7ef5d3c9d1269af6a10e287f19793e6624797ffa
 	
 	/**
 	*The ArrayListGen method creates the ArrayList
