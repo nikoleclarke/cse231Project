@@ -29,7 +29,6 @@ public class ArrayListTest extends TestCase{
 		//Test array
 		int[] intArray = {200, 150, 391, 20, 500, 1011, 971, 850, 90, 430};
 		finalArray = new int[] {971, 1011};
-		// this.finalArray = finalArray;
 
 		//Initialize files
 		ArrayListGen arrayList = new ArrayListGen(intArray);
@@ -42,7 +41,7 @@ public class ArrayListTest extends TestCase{
 	*/
 	public void testSort(){
 
-		assertEquals(finalArray[0], aListHelper.getValues()[0]); //result -> sortedArrayList.get... get first two in array
+		assertEquals(finalArray[0], aListHelper.getValues()[0]);
 		assertEquals(finalArray[1], aListHelper.getValues()[1]);
 		assertNotNull(aListHelper.getTime());
 		assertNotNull(aListHelper.getSortTime());
