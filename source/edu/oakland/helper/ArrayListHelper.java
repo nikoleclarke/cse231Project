@@ -27,7 +27,7 @@ public class ArrayListHelper {
 	public ArrayListHelper(ArrayList<Integer> arrayList){
 		this.arrayList = arrayList;
 		this.bubbleSort();
-		//this.find();
+		this.find();
 	}
 
 	private void bubbleSort(){
@@ -76,11 +76,23 @@ public class ArrayListHelper {
 		arrayList.set(indexTwo, temp);
 	}
 
-	public boolean find(int number) {
-		values = {-1,-1};
+	public boolean find() {
+		values = new int[] {-1,-1};
+
 		startTime = System.nanoTime();
-		boolean result = find(0, arrayList.size()-1);
-		boolean result = find();
+		boolean result = false;
+		for(Iterator iterator = arrayList.iterator(); iterator.hasNext();){
+			int element = (int) iterator.next();
+			if(element > 400 && element < 4000 && element % 2 == 1){
+				if(values[0] == -1){
+					values[0] = element;
+				}else if(values[1] == -1){
+						values[1] = element;
+						result = true;
+						break;
+				}
+			}
+		}
 		endTime = System.nanoTime();
 		totalTime = (endTime - startTime);
 
@@ -100,47 +112,6 @@ public class ArrayListHelper {
 
 	public long getSortTime(){
 		return totalSortTime;
-	}
-	private boolean find(){
-		for(Iterator iterator = arrayList.iterator(); iterator.hasNext();){
-			int element = iterator.next();
-			if(element > 400 && element < 4000 && element % 2 == 1){
-				if(value[0] != -1){
-					value[0] = element;
-				}else if(value[1] != -1){
-						value[1] = element;
-						return true;
-				}
-			}
-		}
-		return false;
-	}
-	private boolean find(int left, int right) {
-	//
-	// 	if(left >=  arrayList.size() || right >= arrayList.size()){
-	// 		return false;
-	// 	}
-	//
-	// 	int elementIndex = (right-left)/2;
-	// 	elementIndex += (elementIndex+left < arrayList.size())? left : 0;
-	// 	int element = arrayList.get(elementIndex);
-	// 	int nextElement = arrayList.get(elementIndex+1);
-	//
-	// 	if(element > 400 && element < 4000 && element % 2 == 1){
-	// 		value[0] = element;
-	// 		if(nextElement > 400 && nextElement < 4000 && nextElement % 2 == 1){
-	// 			value[1] = nextElement;
-	// 			return true;
-	// 		}
-	// 	}
-	//
-	// 	if (4000 < element) {
-	// 		find(left, elementIndex);
-	// 	} else if (400 > element){
-	// 		find(elementIndex, right);
-	// 	}
-
-	return false;
 	}
 
 	public int[] getValues(){
