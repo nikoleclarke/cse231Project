@@ -13,14 +13,18 @@ import java.util.*;
 public class ArrayListHelper {
 
 	/**
-	*Time variables are used to find Big O' Notation
-	*
+	*Time variables are used to find Big O' Notation time elapsed
+	*in milliseconds, microseconds, and nanoseconds
 	*/
 	private long startTime, endTime, totalTime;
 	private long timeMicro, timeMilli;
 	private long startSortTime, endSortTime, totalSortTime;
 	private long sortTimeMicro, sortTimeMilli;
 
+	/**
+	*arrayList variable is passed in from arrayListGen class
+	*values variable contains numbers retrieved from array list search
+	*/
 	private ArrayList<Integer> arrayList;
 	private int[] values;
 
@@ -106,14 +110,26 @@ public class ArrayListHelper {
 		return result;
 	}
 
+	/**
+	*getTime method is used to return time elapsed during 
+	*array list search
+	*/
 	public long getTime() {
 		return totalTime;
 	}
 
+	/**
+	*getSortTime method is used to return time elapsed during 
+	*bubble sort
+	*/
 	public long getSortTime(){
 		return totalSortTime;
 	}
 
+	/**
+	*getValues method is used to return values found in array list 
+	*search within a 2 element array
+	*/
 	public int[] getValues(){
 		return values;
 	}
