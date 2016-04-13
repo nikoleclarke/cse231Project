@@ -90,6 +90,8 @@ public class ArrayListHelper {
 	*The find method is used to find the first two odd values between 
 	*400 and 4000 in the sorted array list and tell if two values between 
 	*these numbers exist in the array
+	*@return result returning a boolean true or false if the element is inbetween 
+	*400 and 4000 
 	*/
 	public boolean find() {
 		values = new int[] {-1,-1};
@@ -124,6 +126,7 @@ public class ArrayListHelper {
 	/**
 	*getTime method is used to return time elapsed during 
 	*array list search
+	*@return totalTime 
 	*/
 	public long getTime() {
 		return totalTime;
@@ -132,6 +135,7 @@ public class ArrayListHelper {
 	/**
 	*getSortTime method is used to return time elapsed during 
 	*bubble sort
+	*@return totalSortTime 
 	*/
 	public long getSortTime(){
 		return totalSortTime;
@@ -140,6 +144,7 @@ public class ArrayListHelper {
 	/**
 	*getValues method is used to return values found in array list 
 	*search within a 2 element array
+	*@return values these are the odd values that are in the array list and returned as an int array
 	*/
 	public int[] getValues(){
 		return values;
