@@ -77,7 +77,8 @@ public class ArrayListHelper {
 	/**
 	*The swapValues method is used by the bubbleSort
 	*method to arrange array list values in ascending order
-	*@params indexOne, indexTwo int values used to swap index positions
+	*@param indexOne int values used to swap index positions
+	*@param indexTwo int values used to swap index positions
 	* in the array
 	*/
 	public void swapValues(int indexOne, int indexTwo) {
