@@ -23,7 +23,7 @@ public class ArrayListHelper {
 
 	/**
 	*arrayList variable is passed in from arrayListGen class
-	*values variable contains numbers retrieved from array list search
+	*values variable contains numbers retrieved from find method
 	*/
 	private ArrayList<Integer> arrayList;
 	private int[] values;
@@ -74,12 +74,23 @@ public class ArrayListHelper {
 
 	}
 
+	/**
+	*The swapValues method is used by the bubbleSort
+	*method to arrange array list values in ascending order
+	*@params indexOne, indexTwo int values used to swap index positions
+	* in the array
+	*/
 	public void swapValues(int indexOne, int indexTwo) {
 		int temp = arrayList.get(indexOne);
 		arrayList.set(indexOne, arrayList.get(indexTwo));
 		arrayList.set(indexTwo, temp);
 	}
 
+	/**
+	*The find method is used to find the first two odd values between 
+	*400 and 4000 in the sorted array list and tell if two values between 
+	*these numbers exist in the array
+	*/
 	public boolean find() {
 		values = new int[] {-1,-1};
 
